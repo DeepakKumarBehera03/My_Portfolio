@@ -54,10 +54,6 @@ def signup():
 def contacts():
     form = ContactForm()
     if form.validate_on_submit():
-        name = form.name.data
-        email = form.email.data
-        phone = form.phone.data
-        message = form.message.data
         new_user = ContactUser(
             email=form.email.data,
             name=form.name.data,
