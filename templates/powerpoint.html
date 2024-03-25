@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graphical Abstract of Marxist Theory</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+
+<script>
+    // Get canvas element and its context
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    // Set canvas size
+    canvas.width = 800;
+    canvas.height = 600;
+
+    // Define key concepts and their positions
+    var concepts = ['Means of Production', 'Bourgeoisie', 'Proletariat', 'Class Struggle', 'Surplus Value', 'Communism'];
+    var positions = [
+        { x: 100, y: 150 },
+        { x: 300, y: 100 },
+        { x: 300, y: 250 },
+        { x: 500, y: 150 },
+        { x: 700, y: 100 },
+        { x: 700, y: 250 }
+    ];
+
+    // Draw gradient background
+    var gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+    gradient.addColorStop(0, "lightblue");
+    gradient.addColorStop(1, "lightgreen");
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Draw concepts and relationships
+    ctx.font = "bold 16px Arial";
+    ctx.fillStyle = "black";
+    for (var i = 0; i < concepts.length; i++) {
+        // Draw concept
+        ctx.fillText(concepts[i], positions[i].x, positions[i].y);
+    }
+</script>
+</body>
+</html>
