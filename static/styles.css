@@ -109,7 +109,10 @@ body {
     100% { transform:translateX(0%); }
 }
 small{
-color : #F72798
+color : #F72798;
+display:flex;
+align-items:center;
+justify-container : center;
 }
 strong{
 color : #864AF9
